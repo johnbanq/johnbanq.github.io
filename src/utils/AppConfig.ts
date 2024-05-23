@@ -1,8 +1,8 @@
 export const AppConfig = {
-	site_name: 'AstroPress',
-	title: 'AstroPress | Astro and Tailwind CSS',
-	description: 'Boilerplate built with Astro and Tailwind CSS',
+	site_name: '板桥工学',
+	title: '板桥工学',
+	description: 'johnbanq的个人博客',
 	author: 'Nicolas',
-	locale_region: 'de-en',
-	locale: 'en'
+	locale_region: 'zh-cn',
+	locale: 'zh'
 };
