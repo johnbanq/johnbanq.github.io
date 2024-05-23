@@ -30,7 +30,7 @@ const options = {
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://astro-tech-blog-ten.vercel.app/',
+	site: 'https://johnbanq.github.io',
 	markdown: {
 		syntaxHighlight: false,
 		// Disable syntax built-in syntax hightlighting from astro
@@ -38,10 +38,5 @@ export default defineConfig({
 		remarkPlugins: [remarkReadingTime]
 	},
 	integrations: [tailwind(), react(), sitemap()],
-	output: 'static',
-	adapter: vercelStatic({
-		webAnalytics: {
-			enabled: true
-		}
-	})
+	output: 'static'
 });
