@@ -1,0 +1,41 @@
+---
+import { formatDate } from '@/utils/data.util';
+
+interface Props {
+	post: any;
+}
+
+const { post } = Astro.props;
+---
+
+<a href={post.url}>
+	<div
+		class="h-full rounded-2xl bg-stone-200/50 from-sky-600 via-sky-200 to-white p-[1px] text-sm shadow-[inset_0_0_0_1px_rgba(255,255,255,0.4)] hover:bg-gradient-to-r dark:bg-gray-900"
+	>
+		<div
+			class="flex h-full w-full
+		flex-col
+    rounded-[1rem]
+		bg-stone-300
+		p-4
+		text-gray-900
+    opacity-90
+    dark:bg-stone-800
+		dark:text-white"
+		>
+			<div class="flex flex-row">
+				<div class="flex flex-col justify-center mr-2">
+					<img height="64" width="64" src={post.frontmatter.image.src}/>
+				</div>
+				<div class="flex-auto">
+					<p class="text-lg font-bold">{post.frontmatter.title}</p>
+					<div class="flex justify-between text-xs">
+						<p>{post.frontmatter.pubDate} - {post.frontmatter.endDate}</p>
+					</div>
+					<p class="line-clamp-6 pt-2">{post.frontmatter.description}</p>
+					<p class="pt-2 underline">read more →</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</a>

@@ -1,0 +1,26 @@
+---
+import { MarkdownInstance } from 'astro/dist/@types/astro';
+import ProjectCard from './ProjectCard.astro';
+
+interface Props {
+	projects: MarkdownInstance<any>[];
+}
+
+const { projects } = Astro.props;
+---
+
+<div class="mx-auto w-full max-w-screen-lg md:pr-4 py-6">
+	<div class="flex justify-between pb-4">
+		<p class="text-xl font-bold">近期项目</p>
+		<a href="/posts" class="underline hover:text-sky-400">所有项目 →</a>
+	</div>
+	<div class="flex flex-col pb-4">
+		{
+			projects.map((post: any) => (
+				<div class="mb-4 basis-1 ml-0">
+					<ProjectCard post={post} />
+				</div>
+			))
+		}
+	</div>
+</div>

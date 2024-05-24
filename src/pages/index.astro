@@ -2,8 +2,10 @@
 import { AppConfig } from '@/utils/AppConfig';
 import Base from '@/layouts/Base.astro';
 import Hero from '@/components/Hero.astro';
+import Section from '@/components/Section.astro';
 import LatestPosts from '@/components/LatestPosts.astro';
 import { sortPostsByDate } from '@/utils/data.util';
+import LatestProjects from '@/components/LatestProjects.astro';
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -11,9 +13,18 @@ const { description } = AppConfig;
 const allPosts = await Astro.glob('./posts/*.md');
 allPosts.sort(sortPostsByDate);
 const latestPosts = allPosts.slice(0, 3);
+
+const allProjects = await Astro.glob('./projects/*.md');
+allProjects.sort(sortPostsByDate);
+const latestProjects = allProjects.slice(0, 3);
 ---
 
 <Base head={{ title, description }}>
 	<Hero />
-	<LatestPosts posts={latestPosts} />
+	<Section>
+		<div class="md:flex md:justify-between">
+			<LatestProjects projects={latestProjects} />
+			<LatestPosts posts={latestPosts} />
+		</div>
+	</Section>
 </Base>
