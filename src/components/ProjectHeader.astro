@@ -1,0 +1,34 @@
+---
+import Section from './Section.astro';
+import Tags from './Tags.astro';
+
+interface Props {
+	title: string;
+	tags: string[];
+	pubDate: string;
+	endDate: string;
+	img: {
+		src: string;
+	};
+	status: string;
+}
+
+const { title, pubDate, endDate, status, tags, img } = Astro.props;
+---
+
+<Section>
+	<div class="flex flex-row justify-center align-center">
+		<div class="flex flex-col justify-center">
+			{img.src ? <img height="128" width="128" src={img.src} alt="project icon" /> : null}
+		</div>
+		<div class="flex flex-col">
+			<p class="px-4 pb-2 pt-6 text-center text-4xl font-bold">{title}</p>
+			<div class="text-sm px-4 pb-2">
+				<span>{status}</span> - <span>{pubDate}</span> - <span>{endDate}</span>
+			</div>
+			<div class="px-4 pb-6">
+				<Tags tags={tags} withHref={true} />
+			</div>
+		</div>
+	</div>
+</Section>

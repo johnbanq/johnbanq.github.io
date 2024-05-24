@@ -1,0 +1,25 @@
+---
+import { AppConfig } from '@/utils/AppConfig';
+import Base from '@/layouts/Base.astro';
+import PostContent from '@/components/PostContent.astro';
+import ProjectHeader from '@/components/ProjectHeader.astro';
+
+const { description } = AppConfig;
+
+const { frontmatter } = Astro.props;
+---
+
+<Base head={{ title: frontmatter.title, description }}>
+	<div class="mx-auto w-full max-w-screen-md">
+		<ProjectHeader
+			title={frontmatter.title}
+			tags={frontmatter.tags}
+			pubDate={frontmatter.pubDate}
+			endDate={frontmatter.endDate}
+			status={frontmatter.status}
+			img={{ src: frontmatter.image.src }}
+		/>
+		<PostContent><slot /></PostContent>
+	</div>
+</Base>
+
