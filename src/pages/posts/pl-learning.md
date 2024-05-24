@@ -76,7 +76,7 @@ tags: ["软件工程", "编程语言"]
 
 ## 正文：编程语言的知识结构
 
-![01-language-overview](./pl-learning-assets/01-language-overview.jpg)
+![01-language-overview](public/pl-learning-assets/01-language-overview.jpg)
 
 
 我猜想，我们关于某个编程语言的知识可以大致归入上图所示的版图中，分为四个大类：
@@ -213,7 +213,7 @@ struct Foo {
 
 我们关于一个小块的知识又可以大致分成下图所示的六类，按从设计者端到用户端的顺序从左到右排布。如果再将知识的细节含量作为深度的话，我们就得到了一个~~Nike~~钩形：我们不妨把它叫做“细节之谷”。细节越多越具体，越能帮助我们在使用时做性能优化和故障排查。细节越少越通用，我们可以跨多个工具甚至跨语言使用这些知识。
 
-![02-type-of-knowledge](./pl-learning-assets/02-type-of-knowledge.jpg)
+![02-type-of-knowledge](public/pl-learning-assets/02-type-of-knowledge.jpg)
 
 其实这个模型来源于我对一些框架和库的观察，所以我就用Java社区大名鼎鼎的Spring（Spring Core Framework / Core Technologies）举例好了。这个分类应该也同样对语言特性与运行时适用：
 * 目标问题与动机是我们设计这一特性或者库所要解决的核心问题。
@@ -261,7 +261,7 @@ struct Foo {
 
 其实本文最早是一个系列的开头：我当时想讲详细一点，于是试着列了一下我认识的东西。发现要真这么搞我看我能鸽到退休——
 
-![03-not-today-thanks](./pl-learning-assets/03-not-today-thanks.jpg)
+![03-not-today-thanks](public/pl-learning-assets/03-not-today-thanks.jpg)
 
 我对写书没有兴趣，谢谢 :/
 
