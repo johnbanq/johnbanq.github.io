@@ -1,0 +1,51 @@
+---
+export interface Props {
+    title: string;
+	description: string;
+    image_url: string;
+    image_alt: string;
+    url: string;
+}
+
+const {
+	title: title,
+    description: description,
+    image_url: image_url,
+    image_alt: image_alt,
+    url: url
+} = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  Essential META Tags -->
+    <meta property="og:title" content={title}>
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content={image_url}>
+    <meta property="og:url" content={url}>
+    <meta name="twitter:card" content="summary_large_image">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content={description}>
+    <meta property="og:site_name" content="0xFFFF">
+    <meta name="twitter:image:alt" content={image_alt}>
+    <!--  Non-Essential, But Required for Analytics -->
+    <meta name="twitter:site" content="@johnbanq1">
+  <title>{title} - 0xFFFF跳板</title>
+</head>
+
+<body>
+  <h1>{title} - 0xFFFF跳板</h1>
+  <span>正在前往：</span><a id="link" href={url} style="color:blue">论坛正文</a>......
+  <script>
+    const link = document.getElementById('link');
+    const destination = link!!.getAttribute('href');
+    window.location.replace(destination!!);
+  </script>
+</body>
+
+</html>
+
