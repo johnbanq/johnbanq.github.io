@@ -11,7 +11,7 @@ image:
 tags: ["深度学习"]
 ---
 
-(本文首发于[0xFFFF](https://0xffff.one/d/2041/2))
+(本文首发于[0xFFFF](https://0xffff.one/d/2041))
 
 >
 > 深度学习不是一门纯理论学科

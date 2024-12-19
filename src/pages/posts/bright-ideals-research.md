@@ -11,7 +11,7 @@ image:
 tags: ["深度学习"]
 ---
 
-(本文首发于[0xFFFF](https://0xffff.one/d/2049/3))
+(本文首发于[0xFFFF](https://0xffff.one/d/2049))
 
 >
 > 也许，这只是门手艺而已
